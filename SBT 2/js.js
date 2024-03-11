@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search');
     searchInput.addEventListener('input', function () {
         const searchTerm = this.value.toLowerCase();
-        const filteredData = data.filter(row => row.some(cell => cell.toLowerCase().includes(searchTerm)));
+        const filteredData = data.filter(row => row.some(cell => cell.toString().toLowerCase().includes(searchTerm)));
         renderTable(filteredData);
     });
 });
